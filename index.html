@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AR Marker Model</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker type="pattern" url="my-logo.patt">
+        <a-entity 
+          gltf-model="darahtBeta.glb" 
+          scale="3 3 3" 
+          position="0 0.5 0" 
+          rotation="0 180 0"
+          animation-mixer
+        ></a-entity>
+        <a-light type="directional" position="0 1 0" intensity="0.5"></a-light>
+      </a-marker>
+
+      <a-light type="ambient" intensity="1"></a-light>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
